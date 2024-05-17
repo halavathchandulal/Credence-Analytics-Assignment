@@ -7,12 +7,11 @@ const port = 3000
 
 app.use(bodyParser.json())
 
-// MongoDB connection
 mongoose
   .connect('mongodb://localhost:27017/bookstore', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 30000, // Increase timeout to 30 seconds
+    serverSelectionTimeoutMS: 30000, 
   })
   .then(() => {
     console.log('MongoDB connected...')
